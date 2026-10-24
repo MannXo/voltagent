@@ -160,6 +160,54 @@ const EXTRA_PROVIDER_REGISTRY: ModelProviderRegistryEntry[] = [
     env: ["MINIMAX_API_KEY"],
     doc: "https://platform.minimaxi.com/docs/api-reference/api-overview",
   },
+  // Removed from models.dev, kept so existing model IDs still resolve.
+  {
+    id: "firmware",
+    name: "Firmware",
+    npm: "@ai-sdk/openai-compatible",
+    api: "https://app.firmware.ai/api/v1",
+    env: ["FIRMWARE_API_KEY"],
+    doc: "https://firmware.ai",
+  },
+  {
+    id: "github-models",
+    name: "GitHub Models",
+    npm: "@ai-sdk/openai-compatible",
+    api: "https://models.github.ai/inference",
+    env: ["GITHUB_TOKEN"],
+    doc: "https://docs.github.com/en/github-models",
+  },
+  {
+    id: "iflowcn",
+    name: "iFlow",
+    npm: "@ai-sdk/openai-compatible",
+    api: "https://apis.iflow.cn/v1",
+    env: ["IFLOW_API_KEY"],
+    doc: "https://platform.iflow.cn/en/docs",
+  },
+  {
+    id: "kimi-for-coding",
+    name: "Kimi For Coding",
+    npm: "@ai-sdk/anthropic",
+    api: "https://api.kimi.com/coding/v1",
+    env: ["KIMI_API_KEY"],
+    doc: "https://www.kimi.com/coding/docs/en/third-party-agents.html",
+  },
+  {
+    id: "llama",
+    name: "Llama",
+    npm: "@ai-sdk/openai-compatible",
+    api: "https://api.llama.com/compat/v1/",
+    env: ["LLAMA_API_KEY"],
+    doc: "https://llama.developer.meta.com/docs/models",
+  },
+  {
+    id: "v0",
+    name: "v0",
+    npm: "@ai-sdk/vercel",
+    env: ["V0_API_KEY"],
+    doc: "https://sdk.vercel.ai/providers/ai-sdk-providers/vercel",
+  },
 ];
 
 // EXTRA entries first so they take precedence over auto-generated entries
