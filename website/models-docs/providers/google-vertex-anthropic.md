@@ -28,7 +28,7 @@ const agent = new Agent({
 
 ## Provider package
 
-`@ai-sdk/google-vertex/anthropic`
+`@ai-sdk/google-vertex`
 
 ## Default base URL
 

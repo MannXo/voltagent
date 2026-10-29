@@ -27,13 +27,11 @@ const agent = new Agent({
 
 ## Provider package
 
-`@ai-sdk/openai-compatible`
-
-This provider uses the OpenAI-compatible adapter.
+`workers-ai-provider`
 
 ## Default base URL
 
-`https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/ai/v1`
+Not listed.
 
 You can override the base URL by setting `CLOUDFLARE_WORKERS_AI_BASE_URL`.
 

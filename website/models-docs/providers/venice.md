@@ -26,11 +26,13 @@ const agent = new Agent({
 
 ## Provider package
 
-`venice-ai-sdk-provider`
+`@ai-sdk/openai-compatible`
+
+This provider uses the OpenAI-compatible adapter.
 
 ## Default base URL
 
-Not listed.
+`https://api.venice.ai/api/v1`
 
 You can override the base URL by setting `VENICE_BASE_URL`.
 

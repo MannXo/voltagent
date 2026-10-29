@@ -26,7 +26,9 @@ const agent = new Agent({
 
 ## Provider package
 
-`@openrouter/ai-sdk-provider`
+`@ai-sdk/openai-compatible`
+
+This provider uses the OpenAI-compatible adapter.
 
 ## Default base URL
 

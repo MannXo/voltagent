@@ -16,7 +16,7 @@ import { Agent } from "@voltagent/core";
 const agent = new Agent({
   name: "google-vertex-agent",
   instructions: "You are a helpful assistant",
-  model: "google-vertex/claude-fable-5-1@default",
+  model: "google-vertex/gemini-3.5-flash",
 });
 ```
 

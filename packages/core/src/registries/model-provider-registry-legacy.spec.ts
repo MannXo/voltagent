@@ -61,3 +61,34 @@ describe("providers removed from models.dev", () => {
     });
   });
 });
+
+describe("providers models.dev moved to an unsupported package", () => {
+  const originalEnv = { ...process.env };
+
+  beforeEach(() => {
+    createOpenAICompatibleCalls = [];
+    (globalThis as Record<string, unknown>).___voltagent_model_provider_registry = undefined;
+    process.env = { ...originalEnv };
+  });
+
+  afterEach(() => {
+    process.env = originalEnv;
+    (globalThis as Record<string, unknown>).___voltagent_model_provider_registry = undefined;
+  });
+
+  it.each([
+    ["openrouter/openai/gpt-4o-mini", "OPENROUTER_API_KEY", "https://openrouter.ai/api/v1"],
+    ["venice/venice-uncensored", "VENICE_API_KEY", "https://api.venice.ai/api/v1"],
+  ])(
+    "still resolve %s through the OpenAI-compatible adapter",
+    async (modelId, envName, baseURL) => {
+      process.env[envName] = "test-key";
+
+      const { ModelProviderRegistry } = await import("./model-provider-registry");
+      const model = await ModelProviderRegistry.getInstance().resolveLanguageModel(modelId);
+
+      expect(model).toBeDefined();
+      expect(createOpenAICompatibleCalls[0]?.[0]).toMatchObject({ baseURL });
+    },
+  );
+});

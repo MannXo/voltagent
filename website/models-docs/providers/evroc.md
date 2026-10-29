@@ -16,7 +16,7 @@ import { Agent } from "@voltagent/core";
 const agent = new Agent({
   name: "evroc-agent",
   instructions: "You are a helpful assistant",
-  model: "evroc/KBLab/kb-whisper-large",
+  model: "evroc/Qwen/Qwen3.8-27B",
 });
 ```
 

@@ -208,6 +208,59 @@ const EXTRA_PROVIDER_REGISTRY: ModelProviderRegistryEntry[] = [
     env: ["V0_API_KEY"],
     doc: "https://sdk.vercel.ai/providers/ai-sdk-providers/vercel",
   },
+  // models.dev moved these to packages core does not ship an adapter for.
+  {
+    id: "cloudflare-ai-gateway",
+    name: "Cloudflare AI Gateway",
+    npm: "@ai-sdk/openai-compatible",
+    api: "https://gateway.ai.cloudflare.com/v1/${CLOUDFLARE_ACCOUNT_ID}/${CLOUDFLARE_GATEWAY_ID}/compat/",
+    env: ["CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID", "CLOUDFLARE_GATEWAY_ID"],
+    doc: "https://developers.cloudflare.com/ai-gateway/",
+  },
+  {
+    id: "cloudflare-workers-ai",
+    name: "Cloudflare Workers AI",
+    npm: "workers-ai-provider",
+    env: ["CLOUDFLARE_ACCOUNT_ID", "CLOUDFLARE_API_KEY"],
+    doc: "https://developers.cloudflare.com/workers-ai/models/",
+  },
+  {
+    id: "gitlab",
+    name: "GitLab Duo",
+    npm: "@gitlab/gitlab-ai-provider",
+    env: ["GITLAB_TOKEN"],
+    doc: "https://docs.gitlab.com/user/duo_agent_platform/",
+  },
+  {
+    id: "google-vertex-anthropic",
+    name: "Vertex (Anthropic)",
+    npm: "@ai-sdk/google-vertex",
+    env: ["GOOGLE_VERTEX_PROJECT", "GOOGLE_VERTEX_LOCATION", "GOOGLE_APPLICATION_CREDENTIALS"],
+    doc: "https://cloud.google.com/vertex-ai/generative-ai/docs/partner-models/claude",
+  },
+  {
+    id: "openrouter",
+    name: "OpenRouter",
+    npm: "@ai-sdk/openai-compatible",
+    api: "https://openrouter.ai/api/v1",
+    env: ["OPENROUTER_API_KEY"],
+    doc: "https://openrouter.ai/models",
+  },
+  {
+    id: "sap-ai-core",
+    name: "SAP AI Core",
+    npm: "@mymediset/sap-ai-provider",
+    env: ["AICORE_SERVICE_KEY"],
+    doc: "https://help.sap.com/docs/sap-ai-core",
+  },
+  {
+    id: "venice",
+    name: "Venice AI",
+    npm: "@ai-sdk/openai-compatible",
+    api: "https://api.venice.ai/api/v1",
+    env: ["VENICE_API_KEY"],
+    doc: "https://docs.venice.ai",
+  },
 ];
 
 // EXTRA entries first so they take precedence over auto-generated entries

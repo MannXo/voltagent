@@ -26,7 +26,7 @@ const agent = new Agent({
 
 ## Provider package
 
-`gitlab-ai-provider`
+`@gitlab/gitlab-ai-provider`
 
 ## Default base URL
 

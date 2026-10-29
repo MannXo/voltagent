@@ -26,7 +26,7 @@ const agent = new Agent({
 
 ## Provider package
 
-`@jerome-benoit/sap-ai-provider-v2`
+`@mymediset/sap-ai-provider`
 
 ## Default base URL
 

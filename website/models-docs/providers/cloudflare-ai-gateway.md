@@ -28,11 +28,13 @@ const agent = new Agent({
 
 ## Provider package
 
-`ai-gateway-provider`
+`@ai-sdk/openai-compatible`
+
+This provider uses the OpenAI-compatible adapter.
 
 ## Default base URL
 
-Not listed.
+`https://gateway.ai.cloudflare.com/v1/${CLOUDFLARE_ACCOUNT_ID}/${CLOUDFLARE_GATEWAY_ID}/compat/`
 
 You can override the base URL by setting `CLOUDFLARE_AI_GATEWAY_BASE_URL`.
 

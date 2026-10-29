@@ -16,7 +16,7 @@ import { Agent } from "@voltagent/core";
 const agent = new Agent({
   name: "nearai-agent",
   instructions: "You are a helpful assistant",
-  model: "nearai/Qwen/Qwen3-Embedding-0.6B",
+  model: "nearai/Qwen/Qwen3.8-27B",
 });
 ```
 
